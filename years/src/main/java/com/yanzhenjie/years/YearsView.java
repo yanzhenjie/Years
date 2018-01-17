@@ -124,13 +124,16 @@ public class YearsView extends FrameLayout {
      */
     public void setYearAdapter(WheelViewAdapter yearAdapter) {
         mYearView.setAdapter(yearAdapter);
+        if (yearAdapter.getItemsCount() > 0) {
+            mCurrentYear = 0;
+        }
     }
 
     /**
      * Set the year's data, using the default adapter.
      */
     public void setYearItemList(List<String> yearItemList) {
-        mYearView.setAdapter(new Adapter(getContext(), yearItemList));
+        setYearAdapter(new Adapter(getContext(), yearItemList));
     }
 
     /**
@@ -138,13 +141,16 @@ public class YearsView extends FrameLayout {
      */
     public void setMonthAdapter(WheelViewAdapter monthAdapter) {
         mMonthView.setAdapter(monthAdapter);
+        if (monthAdapter.getItemsCount() > 0) {
+            mCurrentYear = 0;
+        }
     }
 
     /**
      * Set the month's data, using the default adapter.
      */
     public void setMonthItemList(List<String> yearItemList) {
-        mMonthView.setAdapter(new Adapter(getContext(), yearItemList));
+        setMonthAdapter(new Adapter(getContext(), yearItemList));
     }
 
     /**
