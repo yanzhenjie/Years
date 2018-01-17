@@ -1,0 +1,19 @@
+apply plugin: rootProject.ext.plugins.library
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+    }
+
+    resourcePrefix 'years'
+}
+
+dependencies {
+    compile rootProject.ext.dependencies.androidWheel
+}
+
+apply from: "https://raw.githubusercontent.com/yanzhenjie/bintray/master/maven.gradle"
