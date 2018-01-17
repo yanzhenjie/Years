@@ -142,7 +142,7 @@ public class YearsView extends FrameLayout {
     public void setMonthAdapter(WheelViewAdapter monthAdapter) {
         mMonthView.setAdapter(monthAdapter);
         if (monthAdapter.getItemsCount() > 0) {
-            mCurrentYear = 0;
+            mCurrentMonth = 0;
         }
     }
 
