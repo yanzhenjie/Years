@@ -15,14 +15,18 @@
     limitations under the License.
 -->
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
-
-    <color name="colorFont">#333333</color>
-    <color name="colorWhite">#FFFFFF</color>
-
-    <color name="YearsFilterSideActivity">#223F51B5</color>
-    <color name="YearsFilterSideDialog">#22FF4081</color>
-    <color name="YearsFilter">#22FFFFFF</color>
+    <string-array name="month_list">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
 </resources>

@@ -15,7 +15,19 @@
     limitations under the License.
 -->
 <resources>
-    <string name="app_name">Year</string>
-    <string name="app_year">Year</string>
-    <string name="app_month">Month</string>
+    <string name="app_name">Years</string>
+
+    <string name="app_activity_sample">In Activity</string>
+    <string name="app_dialog_sample">In Dialog(Recommend)</string>
+
+    <string name="app_year_select">Select Year</string>
+    <string name="app_month_select">Select Month</string>
+
+    <string name="app_year">Show Year</string>
+    <string name="app_month">Show Month</string>
+
+    <string name="app_obtain">Active Obtain</string>
+
+    <string name="cancel">Cancel</string>
+    <string name="confirm">Confirm</string>
 </resources>

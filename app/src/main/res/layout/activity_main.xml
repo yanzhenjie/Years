@@ -40,38 +40,14 @@
         android:orientation="vertical"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <TextView
-            android:id="@+id/tv_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/years_dp_10"
-            android:text="@string/app_year"
-            android:textSize="@dimen/years_sp_18"/>
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_activity"
+            style="@style/Button.Primary.WrapContent.WidthMatchParent"
+            android:text="@string/app_activity_sample"/>
 
-        <com.yanzhenjie.years.YearsView
-            android:id="@+id/years_view"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/years_dp_10">
-
-            <android.support.v7.widget.AppCompatButton
-                android:id="@+id/btn_year"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/app_year"/>
-
-            <android.support.v7.widget.AppCompatButton
-                android:id="@+id/btn_month"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/app_month"/>
-        </LinearLayout>
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_dialog"
+            style="@style/Button.Primary.WrapContent.WidthMatchParent"
+            android:text="@string/app_dialog_sample"/>
     </LinearLayout>
 </android.support.design.widget.CoordinatorLayout>

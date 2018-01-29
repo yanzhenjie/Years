@@ -15,16 +15,15 @@
  */
 package com.yanzhenjie.years.sample;
 
-import android.graphics.Color;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.TextView;
-
-import com.yanzhenjie.years.YearsView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -39,38 +38,40 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        final TextView tvTitle = (TextView) findViewById(R.id.tv_title);
-        final YearsView yearsView = (YearsView) findViewById(R.id.years_view);
-
-        int[] colors = {Color.parseColor("#993F51B5"), Color.parseColor("#00000000")};
-        yearsView.setShadow(colors);
-
-        List<String> yearItemList = new ArrayList<>();
-        for (int i = 2000; i < 2050; i++) {
-            yearItemList.add(Integer.toString(i));
-        }
-
-        List<String> monthItemList = new ArrayList<>();
-        for (int i = 1; i < 12; i++) {
-            monthItemList.add(Integer.toString(i));
-        }
-
-        yearsView.setYearItemList(yearItemList);
-        yearsView.setMonthItemList(monthItemList);
-
-        findViewById(R.id.btn_year).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.btn_activity).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tvTitle.setText(R.string.app_year);
-                yearsView.showYear();
+                Intent intent = new Intent(MainActivity.this, SampleActivity.class);
+                startActivity(intent);
             }
         });
-        findViewById(R.id.btn_month).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.btn_dialog).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tvTitle.setText(R.string.app_month);
-                yearsView.showMonth();
+                shoeYearsDialog();
             }
         });
+    }
+
+    private void shoeYearsDialog() {
+        final List<String> yearList = new ArrayList<>();
+        for (int i = 1970; i <= 3000; i++) {
+            yearList.add(Integer.toString(i));
+        }
+
+        String[] monthArray = getResources().getStringArray(R.array.month_list);
+        final List<String> monthList = Arrays.asList(monthArray);
+
+        YearsDialog yearsDialog = new YearsDialog(this, yearList, monthList, new YearsDialog.Callback() {
+            @Override
+            public void onValue(YearsDialog dialog, int yearIndex, int monthIndex) {
+                dialog.dismiss();
+
+                String year = yearList.get(yearIndex);
+                String month = monthList.get(monthIndex);
+                Toast.makeText(MainActivity.this, year + "-" + month, Toast.LENGTH_LONG).show();
+            }
+        });
+        yearsDialog.show();
     }
 }

@@ -15,14 +15,17 @@
     limitations under the License.
 -->
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <string name="app_activity_sample">在Activity中</string>
+    <string name="app_dialog_sample">在Dialog中（推薦）</string>
 
-    <color name="colorFont">#333333</color>
-    <color name="colorWhite">#FFFFFF</color>
+    <string name="app_year_select">選擇年份</string>
+    <string name="app_month_select">選擇月份</string>
 
-    <color name="YearsFilterSideActivity">#223F51B5</color>
-    <color name="YearsFilterSideDialog">#22FF4081</color>
-    <color name="YearsFilter">#22FFFFFF</color>
+    <string name="app_year">顯示年</string>
+    <string name="app_month">顯示月</string>
+
+    <string name="app_obtain">主動獲取</string>
+
+    <string name="cancel">取消</string>
+    <string name="confirm">確定</string>
 </resources>

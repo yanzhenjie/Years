@@ -21,6 +21,7 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:textColor">@color/colorFont</item>
+        <item name="android:textAllCaps">false</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -31,5 +32,65 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+    <!-- Button -->
+    <style name="AppTheme.Button"/>
+
+    <style name="AppTheme.Button.Primary">
+        <item name="colorButtonNormal">@color/colorPrimary</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="Button" parent="Widget.AppCompat.Button">
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <style name="Button.Primary">
+        <item name="android:theme">@style/AppTheme.Button.Primary</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <style name="Button.Primary.WrapContent">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="Button.Primary.WrapContent.WidthMatchParent">
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="ButtonText" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <style name="ButtonText.Primary">
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="ButtonText.Primary.WrapContent">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="ButtonText.Secondary">
+        <item name="android:textColor">@color/colorFont</item>
+    </style>
+
+    <style name="ButtonText.Secondary.WrapContent">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!-- ImageButton -->
+    <style name="ImageButton" parent="Widget.AppCompat.ImageButton">
+        <item name="android:background">?selectableItemBackgroundBorderless</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:button">@null</item>
+    </style>
+
+    <style name="ImageButton.WrapContent">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
 
 </resources>
